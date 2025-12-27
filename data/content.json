@@ -1,0 +1,84 @@
+{
+"business": {
+"name": "Daoud Textil Reinigung",
+"address": "Alte Landstrasse 17, 8942 Oberrieden, Switzerland",
+"phone": "+41 76 266 98 77",
+"whatsappNumber": "41762669877",
+"email": "info@daoud-textilreinigung.com",
+"coordinates": {
+"lat": 47.2796,
+"lng": 8.5721
+},
+"openingHours": [
+{ "day": "Sat", "hours": "08:00–14:00", "isClosed": false },
+{ "day": "Sun", "hours": "Geschlossen", "isClosed": true },
+{ "day": "Mon", "hours": "Geschlossen", "isClosed": true },
+{ "day": "Tue–Fri", "hours": "08:00–18:30", "isClosed": false }
+],
+"waMessageDE": "Hallo Daoud Team 👋, ich möchte eine Abholung buchen. Adresse: [Meine Adresse] Produkte: [z.B. 2 Hemden, 1 Hose] Gewünschter Termin: [Datum/Zeit] Name: [Ihr Name]",
+"blurbDE": "Daoud Textil Reinigung — Mohammad Daoud tarafından kurulmuştur; 10+ yıl uluslararası deneyim; endüstri standardı makinelerle, çevre dostu yöntemlerle maksimum kalite ve adil fiyat."
+},
+"seo": {
+"siteUrl": "https://daoud-textilreinigung.com",
+"titleDE": "Daoud Textil Reinigung: Professionelle Reinigung & Schneiderei in Oberrieden",
+"descriptionDE": "Umweltfreundliche Textilreinigung und präzise Schneiderei in Oberrieden. Kostenlose Abholung und Lieferung möglich. Jetzt WhatsApp über Termin vereinbaren."
+},
+"header": {
+"navItems": [
+{ "labelDE": "Home", "anchor": "home" },
+{ "labelDE": "Services", "anchor": "services" },
+{ "labelDE": "Preise", "anchor": "pricing" },
+{ "labelDE": "B2B", "anchor": "b2b" },
+{ "labelDE": "Schneiderei", "anchor": "tailoring" },
+{ "labelDE": "Referenzen", "anchor": "testimonials" },
+{ "labelDE": "Blog", "anchor": "blog" },
+{ "labelDE": "FAQ", "anchor": "faq" },
+{ "labelDE": "Kontakt", "anchor": "contact" }
+]
+},
+"hero": {
+"headlineDE": "Daoud Textil Reinigung — Professionelle Reinigung & Schneiderei in Oberrieden",
+"subtitleDE": "Umweltfreundlich. Präzise. Kostenlose Abholung mümkün.",
+"trustBadgesDE": [
+"10+ Jahre Erfahrung",
+"Umweltfreundlich",
+"Kostenlose Abholung"
+],
+"ctaWhatsAppDE": "Jetzt Abholung per WhatsApp buchen",
+"ctaRouteDE": "Wegbeschreibung (Oberrieden)"
+},
+"b2b": {
+"titleDE": "B2B Textilservice für Unternehmen",
+"descriptionDE": "Wir bieten maßgeschneiderte Bulk- und Abonnement-Reinigungsdienste für Hotels, Restaurants, Spas, Gesundheitswesen und Uniformen. Profitieren Sie von zuverlässiger Logistik und erstklassiger Qualität.",
+"ctaDE": "B2B Angebot anfragen"
+},
+"tailoring": {
+"titleDE": "Professionelle Schneiderei & Reparaturen",
+"shortDescriptionDE": "Unsere erfahrenen Schneider bieten schnelle und präzise Anpassungen, Reparaturen und Änderungen. Bringen Sie Ihre Kleidungsstücke zum Experten.",
+"commonJobsDE": ["Hosen kürzen", "Reißverschluss ersetzen", "Ärmel anpassen", "Kleider ändern"],
+"ctaDE": "Termin für Schneiderei vereinbaren"
+},
+"contact": {
+"mapPlaceholderTextDE": "Interaktive Karte lädt auf Klick/Touch.",
+"mapCtaDE": "Karte aktivieren / Route starten",
+"qrCodesDE": {
+"whatsapp": {
+"title": "WhatsApp QR Code",
+"description": "Scannen Sie, um direkt eine Abholung zu buchen."
+},
+"map": {
+"title": "Standort QR Code",
+"description": "Scannen Sie für die Navigation zu unserem Standort."
+},
+"prices": {
+"title": "Preisliste QR Code",
+"description": "Scannen Sie, um unsere aktuelle Preisliste (PDF) anzusehen."
+}
+},
+"legalLinks": [
+{ "labelDE": "Impressum", "href": "/impressum" },
+{ "labelDE": "Datenschutzerklärung", "href": "/datenschutzerklaerung" },
+{ "labelDE": "AGB", "href": "/agb" }
+]
+}
+}
