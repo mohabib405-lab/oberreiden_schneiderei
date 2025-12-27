@@ -26,7 +26,7 @@ const SERVICE_DATA_DE = {
       { name: "Hose" },
       { name: "Anzugjacke / Blazer" },
       { name: "Mantel / Jacke" },
-      { name: "Daunenduvet (Einzelbett)" },
+      { name: "Daunenduvet" },
       { name: "Teppichreinigung (pro m²)" }
     ]
   },
