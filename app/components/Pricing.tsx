@@ -34,7 +34,7 @@ const SERVICE_DATA_DE = {
     categoryDE: "Schneiderei & Reparaturen",
     descriptionDE: "Präzise und schnelle Änderungsarbeiten und Reparaturen durch unsere erfahrenen Schneider.",
     items: [
-      { name: "Hosen kürzen (Standard)" },
+      { name: "Hosen kürzen" },
       { name: "Hosen enger machen (Bund/Bein)" },
       { name: "Ärmel kürzen (Jacke / Hemd)" },
       { name: "Reissverschluss ersetzen (Standard)" },
