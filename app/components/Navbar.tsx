@@ -48,8 +48,8 @@ export default function Navbar() {
   // Navigasyon Bağlantıları (Redundant "Kontakt" linki kaldırıldı)
   const links = [
     { href: "#home", label: "Start" }, // Hero section ID
-    { href: "#pricing", label: "Preise" },
-    { href: "#lieferung", label: "Abholung" },
+    { href: "#pricing", label: "Services" },
+    { href: "#lieferservice", label: "Abholung" },
     { href: "#testimonials", label: "Kunden" },
     { href: "#faq", label: "FAQ" },
     // { href: "#contact", label: "Kontakt" }, // "Jetzt anfragen" butonu ile aynı işlevi gördüğü için kaldırıldı

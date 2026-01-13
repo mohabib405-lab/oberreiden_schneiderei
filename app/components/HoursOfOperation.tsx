@@ -20,7 +20,7 @@ const THEME = {
 
 // Arbeitszeiten Daten (Eksik olan veri dizisi eklendi)
 const OPERATING_HOURS = [
-  { day: "Montag", hours: "08:00 – 18:00 Uhr", closed: false },
+  { day: "Montag", hours: "09:00 – 18:00 Uhr", closed: false },
   { day: "Dienstag", hours: "08:00 – 18:30 Uhr", closed: false },
   { day: "Mittwoch", hours: "08:00 – 18:30 Uhr", closed: false },
   { day: "Donnerstag", hours: "08:00 – 18:30 Uhr", closed: false },
@@ -139,13 +139,6 @@ export default function   HoursOfOperation() {
             );
           })}
         </div>
-        
-        {/* Zusatzinformationen */}
-        {/* Metin rengi inline style ile düzeltildi */}
-        <p className={`mt-8 text-sm`} style={{ color: `${THEME.primaryText}b3` }}>
-            Beachten Sie: Wir bieten einen flexiblen Abhol- und Lieferservice an. Individuelle Termine sind nach Absprache möglich.
-        </p>
-
       </div>
     </section>
   );

@@ -1,129 +1,133 @@
 "use client";
 
 import React, { useState } from 'react';
-import Image from 'next/image';
-import { Leaf } from 'lucide-react';
+import { Scissors, Shirt } from 'lucide-react';
 
-// --- Theme Colors (Tailwind classes for consistency) ---
 const THEME = {
-  // Primary (Ana metin, koyu renkler, Navbar ile uyumlu)
   primaryText: 'text-slate-900',
   darkNeutral: 'text-slate-700',
-  // Accent (Vurgu, CTA, Navbar CTA ile uyumlu)
   accent: 'emerald-600',
   accentBg: 'bg-emerald-600',
-  // Light Background (Bölüm arka planı)
   lightBackground: 'bg-emerald-50',
 };
 
-// --- Data Structure (German) ---
 const SERVICE_DATA_DE = {
   'Reinigung': {
-    categoryDE: "Textilreinigung & Wäsche",
-    descriptionDE: "Professionelle, umweltfreundliche und schonende Reinigung für alle Textilien.",
+    categoryDE: "Textilreinigung",
+    icon: Shirt,
     items: [
-      { name: "Hemde" },
-      { name: "Hose" },
-      { name: "Anzugjacke / Blazer" },
-      { name: "Mantel / Jacke" },
-      { name: "Daunenduvet" },
-      { name: "Teppichreinigung (pro m²)" }
+      { 
+        name: "Bekleidungsreinigung", 
+        description: "Schonende Reinigung für Hemden, Anzüge, Kleider und Alltagskleidung.",
+        image: "/images/Bekleidungsreinigung.jpg",
+        alt: "Giyim temizliği"
+      },
+      { 
+        name: "Heimtextilien", 
+        description: "Hygiene für Vorhänge, Bettwäsche, Decken und Tischtücher.",
+        image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=800&auto=format&fit=crop",
+        alt: "Ev tekstili temizliği"
+      },
+      { 
+        name: "Chemische Reinigung", 
+        description: "Professionelle Trockenreinigung für empfindliche Textilien und hochwertige Garderobe.",
+        image: "https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?q=80&w=800&auto=format&fit=crop",
+        alt: "Chemische Reinigung Service"
+      }
     ]
   },
   'Schneiderei': {
-    categoryDE: "Schneiderei & Reparaturen",
-    descriptionDE: "Präzise und schnelle Änderungsarbeiten und Reparaturen durch unsere erfahrenen Schneider.",
+    categoryDE: "Schneiderei",
+    icon: Scissors,
     items: [
-      { name: "Hosen kürzen" },
-      { name: "Hosen enger machen" },
-      { name: "Ärmel kürzen" },
-      { name: "Reissverschluss ersetzen" },
-      { name: "Knopf annähen / reparieren" },
-      { name: "Kleine Riss-Reparatur" }
+      { 
+        name: "Anpassungen", 
+        description: "Präzises Kürzen, Enger- oder Weiter-Machen für die perfekte Passform.",
+        image: "/images/Anpassungen.jpg",
+        alt: "Kıyafet tadilatı"
+      },
+      { 
+        name: "Reparaturen", 
+        description: "Fachgerechtes Flicken, Reissverschluss-Ersatz und Knopf-Service.",
+        image: "https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?q=80&w=800&auto=format&fit=crop",
+        alt: "Kıyafet onarımı"
+      },
+      { 
+        name: "Vorhänge & Gardinen", 
+        description: "Individuelle Neuanfertigung, Kürzen und Reparatur Ihrer Vorhänge.",
+        image: "/images/Vorhänge & Gardinen.jpg",
+        alt: "Perde hizmetleri"
+      }
     ]
   }
 };
 
-// Set initial state to the first category
 type CategoryKey = keyof typeof SERVICE_DATA_DE;
-
-// --- Components ---
-
-const Header = () => (
-  <div className="text-center mb-8 sm:mb-12">
-    <span className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold text-emerald-800 bg-emerald-100`}> 
-      <Leaf className="w-4 h-4 mr-2 text-emerald-600" /> Unsere Services
-    </span>
-
-    <h2 className={`mt-4 text-3xl sm:text-4xl font-extrabold ${THEME.primaryText} tracking-tight`}>
-      Klare Übersicht — Leistungen als Karten
-    </h2>
-
-    <p className={`mt-3 text-sm ${THEME.darkNeutral} max-w-2xl mx-auto`}>
-      Titel, kurze Beschreibung und Kategorie — kein Preis, keine zusätzlichen Aktionen.
-    </p>
-  </div>
-);
-
-const CATEGORY_IMAGES: Record<string, string> = {
-  Reinigung: '/images/hero_01.png',
-  Schneiderei: '/images/hero_02.jpg',
-};
 
 export default function Pricing() {
   const [selectedCategory, setSelectedCategory] = useState<CategoryKey>('Reinigung');
+  const activeData = SERVICE_DATA_DE[selectedCategory];
 
   return (
-    <section id="pricing" className={`py-12 sm:py-20 ${THEME.lightBackground}`} aria-label="Unsere Dienstleistungen">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Header />
+    <section id="pricing" className={`py-12 sm:py-20 ${THEME.lightBackground}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Başlık Bölümü */}
+        <div className="text-center mb-10">
+          <h2 className={`text-4xl font-bold ${THEME.primaryText} tracking-tight`}>
+            Unsere Services
+          </h2>
+        </div>
 
-        <div>
-          <div className="flex gap-3 justify-center mb-6">
-            {(Object.keys(SERVICE_DATA_DE) as Array<keyof typeof SERVICE_DATA_DE>).map((key) => (
+        {/* Kategori Filtresi */}
+        <div className="flex justify-center gap-4 mb-10">
+          {(Object.keys(SERVICE_DATA_DE) as Array<CategoryKey>).map((key) => {
+            const Icon = SERVICE_DATA_DE[key].icon;
+            const isActive = selectedCategory === key;
+            return (
               <button
                 key={key}
                 onClick={() => setSelectedCategory(key)}
-                className={`px-4 py-2 rounded-full font-semibold transition ${
-                  selectedCategory === key ? 'bg-emerald-600 text-white' : 'bg-white text-slate-700 shadow-sm'
+                className={`flex items-center gap-2 px-8 py-3 rounded-xl font-bold transition-all duration-300 ${
+                  isActive 
+                  ? 'bg-emerald-600 text-white shadow-lg' 
+                  : 'bg-white text-slate-700 hover:bg-emerald-50 shadow-sm'
                 }`}
               >
+                <Icon className="w-5 h-5" />
                 {SERVICE_DATA_DE[key].categoryDE}
               </button>
-            ))}
-          </div>
-
-          {/* Selected category */}
-          {(() => {
-            const key = selectedCategory;
-            const categoryData = SERVICE_DATA_DE[key];
-            const imageSrc = CATEGORY_IMAGES[key] || '/images/hero_01.png';
-            return (
-              <div key={key}>
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className={`text-2xl font-bold ${THEME.primaryText}`}>{categoryData.categoryDE}</h3>
-                  <p className="text-sm text-slate-600 hidden sm:block">{categoryData.descriptionDE}</p>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {categoryData.items.map((item, idx) => (
-                    <article key={idx} className="bg-white rounded-2xl shadow-sm overflow-hidden">
-                      <div className="relative h-40 w-full">
-                        <Image src={imageSrc} alt={item.name} fill className="object-cover" />
-                      </div>
-
-                      <div className="p-4">
-                        <h4 className="font-semibold text-lg text-slate-900">{item.name}</h4>
-                        <p className="mt-2 text-sm text-slate-600">{categoryData.descriptionDE}</p>
-
-                        <span className="inline-block mt-3 text-xs text-emerald-700 bg-emerald-50 px-2 py-1 rounded-full">{categoryData.categoryDE}</span>
-                      </div>
-                    </article>
-                  ))}
-                </div>
-              </div>
             );
-          })()}
+          })}
+        </div>
+
+        {/* Hizmet Kartları */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {activeData.items.map((item, idx) => (
+            <article 
+              key={`${selectedCategory}-${idx}`}
+              className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-slate-100"
+            >
+              {/* Görsel Alanı */}
+              <div className="relative h-60 w-full overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.alt}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-slate-900 mb-2">
+                  {item.name}
+                </h3>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>

@@ -7,6 +7,7 @@ import FAQ from "./components/FAQ";
 import Contact from "./components/Contact";
 import Lieferung from "./components/Lieferung";
 import HoursOfOperation from "./components/HoursOfOperation";
+import MontagSpezial from "./components/MontagSpezial";
 
 export const metadata = {
   title: "Kurier & Textilservice Zürich – Schnell & Umweltfreundlich",
@@ -16,9 +17,10 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <Hero brandName="Zürich Clean & Care" />
+      <Hero brandName="Textilreinigung & Schneiderei in Oberrieden" />
       <main>
         <HoursOfOperation />
+        <MontagSpezial />
         <Pricing />
         <Lieferung />
         <Testimonials />
