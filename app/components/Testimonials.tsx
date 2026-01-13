@@ -192,10 +192,6 @@ export default function Testimonials() {
                 className="text-base relative"
                 style={{ color: THEME.darkNeutral }}
               >
-                <MessageSquareQuote
-                  className="w-5 h-5 absolute -top-1 -left-1 opacity-70"
-                  style={{ color: THEME.accent }}
-                />
                 {t.text}
               </p>
 
